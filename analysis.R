@@ -29,9 +29,9 @@ View(total_lives_lost)
 # Which city was most impacted by shootings (make sure to clarify  how you are measuring "impact")?
 most_impacted_city <- mass_shooting_df %>%
   mutate(impacted = (num_killed + num_injured)) %>%
-  group_by(city) %>%
-  summarise(sum = sum(city)) %>%
-  filter(impacted == max(impacted))
+  group_by(impacted) %>%
+  summarise(sum = sum(impacted)) %>%
+  filter(city == max(city))
   select(city, impacted)
 print(most_impacted_city)
 

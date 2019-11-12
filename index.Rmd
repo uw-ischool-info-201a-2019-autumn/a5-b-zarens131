@@ -1,17 +1,23 @@
 ---
-title: "index"
+title: "Index"
+author: "ZACHARY_ARENSON"
+date: "11/11/2019"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+library("knitr")
+
+# Report on U.S.Shootings
 
 ## Summary Info
-To start your report, you should summarize relevant features of your dataset. Write a paragraph providing a high-level overview of shootings in the US, based on the dataset. This should provide your reader with a sense of scale of the issue, including answers to these questions:
 
-How many shooting events occurred? 
-How many lives were lost?
+*[Original Data Source]()
+To start your report, you should summarize relevant features of your dataset. Write a paragraph providing a high-level overview of shootings in the US, based on the dataset. This should provide your reader with a sense of scale of the issue, including answers to these questions:
+In 2018, 340 shooting events were reported to have occured in the United States. From that number of shootings events, 373 people died during the shooting attacks. Out of the entire country, the state of [STATE] suffered the most injuries and deaths from a mass shooting event.
+
 Which city was most impacted by shootings (make sure to clarify  how you are measuring "impact")?
 Two other insights of your choice
 Data in this paragraph should reference values that you calculate in R, and should not simply be typed as text into the paragraph.
