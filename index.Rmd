@@ -5,15 +5,17 @@ date: "11/11/2019"
 output: html_document
 ---
 ```{r setup, include = FALSE}
+# Load results from the analysis
+# errors and messages will not be printed given the `include = FALSE` option
 source("analysis.R")
+library("knitr")
 ```
-
 # Report on U.S.Shootings
 
 ## Summary Info
 
-*[Original Data Source](NEED SOURCE)
-In 2018, 'r shooting_num' shooting events were reported to have occured in the United States. From that number of shootings events, 373 people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of being unable to respond quick enough as a society.Out of the entire country, the state of [STATE] suffered the most injuries and deaths from a mass shooting event. Depending on the state and even city, more shootings occured within the dataset. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S. 
+*[Original Data Source](https://www.gunviolencearchive.org/reports/mass-shooting)
+In 2018, 'r shooting_num' shooting events were reported to have occured in the United States. From that number of shootings events, 'r total_lives_lost' people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of society being unable to respond quick enough to a domestic attack. Out of the entire country, the state of [STATE] suffered the most injuries and deaths from a mass shooting event. More shootings occured depending on the state and, even cities such as 'r most_impacted_city' noted within the represented data. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S. 
 
 ----------------------------------NEED ONE MORE INSIGHT
 Two other insights of your choice

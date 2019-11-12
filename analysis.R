@@ -43,8 +43,9 @@ View(total_injured)
 
 # How many states are invovled
 num_states <- mass_shooting_df %>%
-  select(state) %>%
+  group_by(state) %>%
   summarise(risk_states = sum(state)) 
+  filter(sum = max(state))
 View(num_states)
 # Summary Table
 summary_table <- mass_shooting_df %>%
