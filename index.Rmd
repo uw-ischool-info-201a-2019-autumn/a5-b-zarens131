@@ -44,7 +44,7 @@ The purpose of this map is to explain the details of severity (amount killed & i
 ## Bar Plot Graph
 `r plot_graph`
 
-### Insights
+### Two Insights
 I chose the specific bar chart because of my interest in visually comparing the number of people killed by state. An insight I gained from the chart is that the states of California and Florida are significantly more impacted by mass shootings. Another insight is that while Pennsylvania and Texas are impacted significantly more than other states, the average is much lower than the higher impacted states.
 
 ## Critical reflection 
