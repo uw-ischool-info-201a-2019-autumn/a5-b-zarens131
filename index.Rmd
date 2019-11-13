@@ -4,7 +4,8 @@ author: "ZACHARY_ARENSON"
 date: "11/11/2019"
 output: html_document
 ---
-```{r setup, include = FALSE}
+
+```{r echo = FALSE, include = FALSE}
 # Load results from the analysis
 # errors and messages will not be printed given the `include = FALSE` option
 source("analysis.R")
@@ -15,21 +16,23 @@ library("knitr")
 ## Summary Info
 
 *[Original Data Source](https://www.gunviolencearchive.org/reports/mass-shooting)
-In 2018, 'r shooting_num' shooting events were reported to have occured in the United States. From that number of shootings events, 'r total_lives_lost' people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of society being unable to respond quick enough to a domestic attack. Out of the entire country, the state of [STATE] suffered the most injuries and deaths from a mass shooting event. More shootings occured depending on the state and, even cities such as 'r most_impacted_city' noted within the represented data. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S. 
-
-----------------------------------NEED ONE MORE INSIGHT
-Two other insights of your choice
+In 2018, `r shooting_num` shooting events were reported to have occured in the United States. From that number of shootings events, 'r total_lives_lost' people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of society being unable to respond quick enough to a domestic attack. Out of the entire country, the state of 'r most_impacted_state' suffered the most injuries and deaths from a mass shooting event. More shootings occured depending on the state and, even cities such as 'r most_impacted_city' noted within the represented data. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S. 
 
 ## Summary Table
+```{r kable_example, echo = FALSE}
+# "Return" the table to render it
+kable(summary_table)
+```
 
 ### Important Insights from Table
-An important trend noticed regarding 
+An important trend noticed regarding
+
 ## Description of a particular incident
 Your report will include a paragraph (4+ sentences) of in-depth information about a particular (single) incident. You should provide your reader with relevant information from the dataset, such as the date and location of the incident, as well as the number of people impacted (injured, killed). You should include a link to at least one outside resource (not found in the data). Data in this paragraph should reference values that you calculate in R, and should not simply be typed as text into the paragraph.
 
 ## An interactive map
-General. While maps are not always the most appropriate visual representation of geographic data, they are extraordinarily popular and attract broad audiences. Before rendering your make, make sure to introduce the purpose of displaying the map in the report (e.g., what types of comparisons it affords).
-
+Before rendering your make, make sure to introduce the purpose of displaying the map in the report (e.g., what types of comparisons it affords).
+`r interactive_map`
 You'll build an interactive map that shows a marker at the location of each shooting. On your map, manipulate the size of the markers based on the underlying dataset (# injured, # killed, etc.). When hovered or clicked on, each point should provide at least 3 pieces of information about the incident (with a line break -- <br> -- between each piece of information) and no irrelevant information.
 
 Below your map, you must note at least 2 insights revealed by the map.
