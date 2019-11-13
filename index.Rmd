@@ -42,10 +42,15 @@ The purpose of this map is to explain the details of severity (amount killed & i
 2) The east coast states are more frequently impacted by mass shootings based on the visual implications.
 
 ## Bar Plot Graph
-`r plot_graph`
+```{r mass_shootings_data, echo=FALSE}
+library(ggplot2)
+ggplot(data = mass_shooting_df, aes(state, num_killed)) + geom_bar(stat="identity") + scale_x_discrete(labels = abbreviate) +
+theme(axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))
+```
 
 ### Two Insights
-I chose the specific bar chart because of my interest in visually comparing the number of people killed by state. An insight I gained from the chart is that the states of California and Florida are significantly more impacted by mass shootings. Another insight is that while Pennsylvania and Texas are impacted significantly more than other states, the average is much lower than the higher impacted states.
+1) I chose the specific bar chart because of my interest in visually comparing the number of people killed by state. An insight I gained from the chart is that the states of California and Florida are significantly more impacted by mass shootings. 
+2) Another insight is that while Pennsylvania and Texas are impacted significantly more than other states, the average is much lower than the higher impacted states.
 
 ## Critical reflection 
 A specific finding from my report argues an implication between cities known for higher levels of poverty and crime and mass shootings. Predictive programs, such as PredPol referenced in the book, help analysists understand trends in mass shooting impacts across the U.S. However, these data sets are available to the public, meaning criminals can do research on safer places for them to conduct criminal activities. Also meaning that poorer areas and its communities are treated and generalized as criminals and or potential ones.
