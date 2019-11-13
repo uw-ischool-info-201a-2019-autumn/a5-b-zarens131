@@ -2,7 +2,6 @@
 #INFO 201 A5
 
 #install packages and load from library
-
 library(dplyr)
 library(ggplot2)
 library(plotly)
@@ -68,5 +67,5 @@ interactive_map <- plot_geo(mass_shooting_df, lat = ~lat, lon = ~long) %>%
     title = "Number of Victims<br /> (Mouse over = info)") 
   
 #plot 
-p <- ggplot(data = mass_shooting_df, aes(state, num_killed)) + geom_bar(stat="identity") + scale_x_discrete(labels = abbreviate) +
+plot_graph <- ggplot(data = mass_shooting_df, aes(state, num_killed)) + geom_bar(stat="identity") + scale_x_discrete(labels = abbreviate) +
   theme(axis.text.x = element_text(size  = 10, angle = 45, hjust = 1, vjust = 1))

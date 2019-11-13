@@ -15,33 +15,37 @@ library("knitr")
 
 ## Summary Info
 
-*[Original Data Source](https://www.gunviolencearchive.org/reports/mass-shooting)
-In 2018, `r shooting_num` shooting events were reported to have occured in the United States. From that number of shootings events, 'r total_lives_lost' people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of society being unable to respond quick enough to a domestic attack. Out of the entire country, the state of 'r most_impacted_state' suffered the most injuries and deaths from a mass shooting event. More shootings occured depending on the state and, even cities such as 'r most_impacted_city' noted within the represented data. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S. 
+[Original Data Source](https://www.gunviolencearchive.org/reports/mass-shooting)
+
+In 2018, `r shooting_num` shooting events were reported to have occured in the United States. From that number of shootings events, `r total_lives_lost` people died during the shooting attacks. Meaning for every one attacker, a person died from the horrible consquences of society being unable to respond quick enough to a domestic attack. Out of the entire country, the state of `r most_impacted_state` suffered the most injuries and deaths from a mass shooting event. More shootings occured depending on the state and, even cities such as `r most_impacted_city` noted within the represented data. Concluding that certain areas struggle with mass shooting events on a larger level than other locations within the U.S.
 
 ## Summary Table
 ```{r kable_example, echo = FALSE}
-# "Return" the table to render it
 kable(summary_table)
 ```
 
 ### Important Insights from Table
-An important trend noticed regarding
+A trend of higher deaths is associated with southern states in the U.S. This could mean culture or gun law issues associated with the states cause of higher death proportions. However, location could be less important, rather law and gun control methods could be the larger issue due to Maryland being a higher death proportion state. However, regardless of either statement being true, there is definently a trend associated between these states and a factor within their state level societies.
 
 ## Description of a particular incident
-Your report will include a paragraph (4+ sentences) of in-depth information about a particular (single) incident. You should provide your reader with relevant information from the dataset, such as the date and location of the incident, as well as the number of people impacted (injured, killed). You should include a link to at least one outside resource (not found in the data). Data in this paragraph should reference values that you calculate in R, and should not simply be typed as text into the paragraph.
+An interesting point of observation, is that `r most_impacted_city` had the most dates recorded of impact, regarding deaths and injury. However, the highest injured count was 8 with 0 deaths on August 5, 2018. The shooting took place in	Illinois, Chicago,	1300 block of W 76th St. Meaning, the amount of shootings that lead to `r most_impacted_city` being the most impacted are built over numerous shootings rather than other impacted cities with large injured and killed during shooting events.
 
-## An interactive map
+[News Report Referring to Specific Shooting Mentioned](https://www.chicagotribune.com/news/breaking/ct-met-chicago-shootings-violence-20180804-story.html)
+
+## Interactive map
 Before rendering your make, make sure to introduce the purpose of displaying the map in the report (e.g., what types of comparisons it affords).
+The purpose of this map is to explain the details of severity (amount killed & injured) and location. This allows an easily accesible tool that can visually and numerically allow users to compare shootings within the dataframe.
 `r interactive_map`
-You'll build an interactive map that shows a marker at the location of each shooting. On your map, manipulate the size of the markers based on the underlying dataset (# injured, # killed, etc.). When hovered or clicked on, each point should provide at least 3 pieces of information about the incident (with a line break -- <br> -- between each piece of information) and no irrelevant information.
 
-Below your map, you must note at least 2 insights revealed by the map.
+### Two insights from the map
+1) Florida seems to have a larger shooting impact compared to other states with fewer shootings.
+2) The east coast states are more frequently impacted by mass shootings based on the visual implications.
 
-Important: Choice of plotting library is up to you, though I suggest you consult the interactive visualization chapter of the book -- remember, the map must be interactive.  Please see chapter 17. 
+## Bar Plot Graph
+`r plot_graph`
 
-## A plot of your choice
-In addition to the interactive map, you will build an additional plot of your choice to answer a specific question about your data. You can do this using the package of your choice, such as ggplot2, plotly, bokeh, or others. The choices you make should be tied directly to the question you have about your data.  We recommend that you use ggplot2. 
+### Insights
+I chose the specific bar chart because of my interest in visually comparing the number of people killed by state. An insight I gained from the chart is that the states of California and Florida are significantly more impacted by mass shootings. Another insight is that while Pennsylvania and Texas are impacted significantly more than other states, the average is much lower than the higher impacted states.
 
-Similarly to your map, you should integrate your plot seamlessly with the rest of your report, and reference/describe it in your text. Regardless of library, the chart should have meaningful and clear title, axis labels, and legend (if appropriate). 
-
-You should provide a defense of why you chose the visual encodings of the chart (i.e., you chose a layout to answer a specific question), and list at least 2 insights gained from the chart.
+## Critical reflection 
+A specific finding from my report argues an implication between cities known for higher levels of poverty and crime and mass shootings. Predictive programs, such as PredPol referenced in the book, help analysists understand trends in mass shooting impacts across the U.S. However, these data sets are available to the public, meaning criminals can do research on safer places for them to conduct criminal activities. Also meaning that poorer areas and its communities are treated and generalized as criminals and or potential ones.
